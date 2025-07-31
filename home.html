@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Painel do Usuário - PWA Gestantes</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-box">
+            <header>
+                <h1>Bem-vindo, <span id="user-name">[Nome]</span></h1>
+                <p><strong>E-mail:</strong> <span id="user-email">[E-mail]</span></p>
+            </header>
+
+            <section class="welcome-message">
+                <p>Estamos felizes em ter você conosco! Fique à vontade para começar seu treino.</p>
+            </section>
+
+            <section class="weather">
+                <h2>Condições do Tempo</h2>
+                <div id="weather-info">
+                    <p><strong>Tempo hoje:</strong> <span id="tempo"></span></p>
+                    <p><strong>Temperatura:</strong> <span id="temp"></span>°C</p>
+                    <p><strong>Umidade:</strong> <span id="humidity"></span>%</p>
+                </div>
+            </section>
+
+            <section class="device-connection">
+                <h2>Dispositivo de Conexão</h2>
+                <p>Aqui você pode conectar seu dispositivo de acompanhamento de treino.</p>
+                <div class="device">
+                    <button class="btn" id="connect-btn">Conectar Dispositivo</button>
+                </div>
+            </section>
+
+            <section class="start-workout">
+                <button class="btn" id="start-workout-btn">Iniciar Treino</button>
+            </section>
+        </div>
+    </div>
+
+    <script>
+         fetch('get-session.php')
+            .then(response => response.json())
+            .then(data => {                 
+                    document.getElementById('user-name').textContent = data.nome;
+                    document.getElementById('user-email').textContent = data.email;
+                }
+            )
+            .catch(error => console.error('Erro na requisição:', error));
+
+        // Função para obter as condições do tempo via API
+        function getWeather() {
+            const apiKey = 'sua_chave_de_api_da_openweathermap';  // Insira sua chave de API aqui
+            const city = 'São Paulo';  // Você pode modificar para a cidade do usuário
+
+            $.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`, function(data) {
+                $('#temp').text(data.main.temp);
+                $('#humidity').text(data.main.humidity);
+            });
+        }
+
+        // Chama a função para carregar as condições do tempo
+        getWeather();
+
+        // Simula a conexão do dispositivo
+        document.getElementById('connect-btn').addEventListener('click', function() {
+            alert('Dispositivo conectado com sucesso!');
+        });
+
+        // Simula o início do treino
+        document.getElementById('start-workout-btn').addEventListener('click', function() {
+            alert('Treino iniciado!');
+            //Navegar para outra página
+            window.location.href = 'treino.html';
+        });
+    </script>
+</body>
+</html>

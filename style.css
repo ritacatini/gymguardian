@@ -1,0 +1,354 @@
+/* Reseta estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 24px;
+    color: #5cb85c;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4cae4c;
+}
+
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    display: block;
+    font-size: 14px;
+    color: #5cb85c;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+/* Estilo adicional para formulários */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.login-box p {
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.login-box .links a {
+    font-size: 14px;
+    color: blue;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.login-box .links a:hover {
+    text-decoration: underline;
+}
+/* Estilo adicional para o painel do usuário */
+.dashboard-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dashboard-box header {
+    margin-bottom: 20px;
+}
+
+.dashboard-box h1 {
+    font-size: 24px;
+    color: #5cb85c;
+    margin-bottom: 5px;
+}
+
+.dashboard-box p {
+    font-size: 16px;
+    color: #777;
+}
+
+.welcome-message, .weather, .device-connection {
+    margin-bottom: 20px;
+}
+
+.weather p {
+    font-size: 18px;
+    color: #333;
+}
+
+.device {
+    margin-top: 15px;
+}
+
+.device .btn {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.device .btn:hover {
+    background-color: #4cae4c;
+}
+
+.start-workout .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0275d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.end-workout .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #d86d02;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.start-workout .btn:hover {
+    background-color: #0056b3;
+}
+/* Estilo adicional para a página de treino */
+.treino-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.treino-box header {
+    margin-bottom: 20px;
+}
+
+.treino-box h1 {
+    font-size: 24px;
+    color: #5cb85c;
+    margin-bottom: 10px;
+}
+
+.treino-box p {
+    font-size: 16px;
+    color: #777;
+}
+
+.treino-list h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.treino-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.treino-list li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.action-buttons {
+    margin-top: 30px;
+}
+
+.action-buttons .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0275d8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.action-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+.action-buttons .btn:active {
+    background-color: #004494;
+}
+/*estilo da pagina de acompanhamento*/
+.progress-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.progress-ring__background {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 10;
+}
+
+.progress-ring__circle {
+    fill: none;
+    stroke: #5cb85c;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+#timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+#heartRate {
+    font-size: 22px;
+    font-weight: bold;
+    /*color: #0275d8;*/
+    margin: 15px 0;
+}
+
+.action-buttons {
+    margin-top: 20px;
+}
+
+.btn-pausar {
+    background-color: #f0ad4e;
+}
+
+.btn-pausar:hover {
+    background-color: #ec971f;
+}
+
+.btn-finalizar {
+    background-color: #d9534f;
+}
+
+.btn-finalizar:hover {
+    background-color: #c9302c;
+}
+.btn-sair {
+    width: 100%;
+    padding: 12px;
+    background-color: #f0ad4e; /* Laranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-sair:hover {
+    background-color: #ec971f; /* Laranja mais escuro ao passar o mouse */
+}

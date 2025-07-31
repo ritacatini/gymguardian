@@ -1,0 +1,80 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 400px; /* Mantendo o mesmo tamanho da home */
+}
+
+/* Caixa do treino */
+.treino-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 22px;
+    color: #5cb85c;
+    margin-bottom: 15px;
+}
+
+/* Parágrafos */
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Botões */
+.action-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #0275d8;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Botão Gerar Novo Treino */
+.btn-gerar {
+    background-color: #5cb85c;
+}
+
+.btn-gerar:hover {
+    background-color: #4cae4c;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+    background-color: #d9534f;
+}
+
+.btn-voltar:hover {
+    background-color: #c9302c;
+}

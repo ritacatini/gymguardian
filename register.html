@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registrar-se - PWA Gestantes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Criar Conta</h1>
+            <p>Preencha os campos abaixo para se registrar</p>
+            <form action="register.php" method="POST" class="login-form">
+                <div class="input-group">
+                    <label for="name">Como deseja ser chamado?</label>
+                    <input type="text" id="name" name="name" placeholder="Digite suas iniciais:" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Crie uma senha" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirmar Senha</label>
+                    <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirme sua senha" required>
+                </div>
+                <button type="submit" class="btn">Registrar</button>
+            </form>
+            <div class="links">
+                <a href="index.html">Já tem uma conta? Faça login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

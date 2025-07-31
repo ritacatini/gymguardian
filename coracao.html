@@ -1,0 +1,38 @@
+<canvas width="50" height="37"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    function circulo(x, y, raio) {
+        pincel.fillStyle = 'red';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function coracao() {
+        circulo(25, 16, 8);
+        circulo(37, 16, 8);
+        pincel.beginPath();
+        pincel.moveTo(18, 21);
+        pincel.lineTo(31, 33);
+        pincel.lineTo(44, 21);
+        pincel.fill();
+    }
+
+    function off() { pincel.clearRect(0, 0, 50, 37);   }
+
+    var on = true;
+    function acendeApaga() {
+        if (on) { 
+            coracao();
+        } else {
+            off();
+        }
+        on = !on;     // alterna, se é True passa p/ False e vice-versa  
+        }
+
+    setInterval(acendeApaga, 500);   // função , tempo    ( 1000 = 1 minuto)
+
+</script>
